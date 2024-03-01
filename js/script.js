@@ -9,6 +9,15 @@ const myFetch = async () => {
 
  const myData = (data) => {
     
+  // if the value is gatter then 6 then show the Show All Buttons
+  const showAllButton = document.getElementById('showAll-Container');
+  if (data.length >= 6) {
+    showAllButton.classList.remove('hidden')
+  }else{
+    showAllButton.classList.add('hidden')
+  }
+
+  //Show Screen in the value only 6
   data = data.slice(0,6)
 
     data.forEach((card) => {
